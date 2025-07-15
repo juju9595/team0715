@@ -17,6 +17,14 @@ public class MemberDto {
         this.mphone = mphone;
         this.mname = mname;
     }
+
+    public MemberDto(int mno,String mid, String mpwd, String mphone, String mname) {
+        this.mno = mno;
+        this.mid = mid;
+        this.mpwd = mpwd;
+        this.mphone = mphone;
+        this.mname = mname;
+    }
 //3. 메소드
 
 
