@@ -1,6 +1,6 @@
 package team0715.view;
 
-import 종합.team0715.controller.BookController;
+import team0715.controller.BookController;
 
 public class BookView {
     private BookView(){}

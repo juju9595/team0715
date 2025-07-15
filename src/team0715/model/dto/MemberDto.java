@@ -16,6 +16,12 @@ public class MemberDto {
         this.mpwd = mpwd;
         this.mphone = mphone;
         this.mname = mname;
+        this.mno = mid.equals("admin") ? 1 : 0;
+    }
+
+    public MemberDto(String mid, String mpwd){
+        this.mid = mid;
+        this.mpwd = mpwd;
     }
 
     public MemberDto(int mno,String mid, String mpwd, String mphone, String mname) {
