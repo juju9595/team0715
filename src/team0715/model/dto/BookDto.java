@@ -1,6 +1,7 @@
 package team0715.model.dto;
 
 public class BookDto {
+
     //멤버변수
     private  int bno;
     private String btitle; //도서명
@@ -13,6 +14,12 @@ public class BookDto {
     //풀생성자
     public  BookDto(int bno, String btitle, String bname) {
         this.bno = bno;
+        this.btitle = btitle;
+        this.bname = bname;
+    }
+
+    public  BookDto(String btitle, String bname) {
+
         this.btitle = btitle;
         this.bname = bname;
     }

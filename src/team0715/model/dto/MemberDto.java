@@ -7,16 +7,18 @@ public class MemberDto {
     private String mpwd; // 비밀번호
     private String mphone; //연락처
     private String mname; //이름
+    private int mtype;
 
     //2.생성자
     public MemberDto(){}
 
-    public MemberDto(String mid, String mpwd, String mphone, String mname) {
+    public MemberDto(int mno, String mid, String mpwd, String mphone, String mname) {
+        this.mno = mno;
         this.mid = mid;
         this.mpwd = mpwd;
         this.mphone = mphone;
         this.mname = mname;
-        this.mno = mid.equals("admin") ? 1 : 0;
+        this.mtype = 1;
     }
 
     public MemberDto(String mid, String mpwd){
@@ -24,13 +26,6 @@ public class MemberDto {
         this.mpwd = mpwd;
     }
 
-    public MemberDto(int mno,String mid, String mpwd, String mphone, String mname) {
-        this.mno = mno;
-        this.mid = mid;
-        this.mpwd = mpwd;
-        this.mphone = mphone;
-        this.mname = mname;
-    }
 //3. 메소드
 
 
