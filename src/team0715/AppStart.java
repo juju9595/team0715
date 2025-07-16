@@ -39,7 +39,7 @@ public class AppStart {
                         int sel = scan.nextInt();
 
                         if ( sel == 1 ) { bookView.bookPost(); }       // 1. 도서등록 메소드
-                        else if ( sel == 2 ) { bookView.bookLoan(); }  // 2. 도서대출 메소드
+                        else if ( sel == 2 ) { bookView.bookPost(); }  // 2. 도서대출 메소드
                         else if ( sel == 3 ) { bookView.bookReturn(); }// 3. 도서반납 메소드
                         else if ( sel == 4 ) { loanView.loanStatus(); }// 4. 내대출현황 메소드
                         else if ( sel == 5 ) { bookView.bookList(); }  // 5. 도서목록 메소드
@@ -51,9 +51,9 @@ public class AppStart {
                         System.out.println("================================================================");
                         System.out.print("선택 > ");
                         int sel = scan.nextInt();
-                        if ( sel == 1 ) { bookView.bookLoan(); }        // 2. 도서대출 메소드
+                        if ( sel == 1 ) { bookView.bookPost(); }        // 1. 도서대출 메소드
                         else if ( sel == 2 ) { bookView.bookReturn(); } // 2. 도서반납 메소드
-                        else if ( sel == 3 ) { loanView.loanStatus(); } // 2. 내대출현황 메소드
+                        else if ( sel == 3 ) { loanView.loanStatus(); } // 3. 내대출현황 메소드
                         else if ( sel == 4 ) { bookView.bookList(); }   // 4. 도서목록 메소드
                         else if ( sel == 5 ) { System.out.println("[안내] 로그아웃 되었습니다."); break; } // 5. 로그아웃 메소드
                         else { System.out.println("[경고] 해당 메뉴는 관리자만 접근 가능합니다."); }
