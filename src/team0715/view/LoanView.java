@@ -16,7 +16,7 @@ public class LoanView {
 
 
     // 3. 메소드
-    // 3-1. 내대출현황 메소드
+
     // 3-1. 내대출현황 메소드
     public void loanStatus(){
 

@@ -3,15 +3,17 @@ package team0715.model.dao;
 import team0715.model.dto.LoanDto;
 import java.util.ArrayList;
 
-public class LoanDao {//class s
+public class LoanDao {
+
+    // 0. 싱글톤 생성(loanDao)
     private LoanDao(){}
     private static final LoanDao loanDao = new LoanDao();
     public static LoanDao getInstance(){
         return loanDao;
     } //public static LoanDao end
-    
 
-    // 대출현황 리스트 DB 생성
+    // 1. 멤버변수
+    // 대출현황 리스트 DB
     private ArrayList<LoanDto> loanDB = new ArrayList<>();
 
 

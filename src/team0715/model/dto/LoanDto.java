@@ -1,12 +1,13 @@
 package team0715.model.dto;
 
 public class LoanDto {
+
     // 1. 멤버 변수
-    private int lno; // 대출번호
-    private int mno; // (대출)회원번호
-    private int bno; //(대출)도서번호
-    private String lStart; //대출일시
-    private String lEnd; //반납일시
+    private int lno;        // pk.대출번호
+    private int mno;        // fk.(대출)회원번호
+    private int bno;        // fk.(대출)도서번호
+    private String lStart;  // 대출일시
+    private String lEnd;    // 반납일시
 
     // 2. 생성자(기본/전체)
     public LoanDto() {

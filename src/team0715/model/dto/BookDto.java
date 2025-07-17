@@ -2,58 +2,45 @@ package team0715.model.dto;
 
 public class BookDto {
 
-    //멤버변수
-    private  int bno;
-    private String btitle; //도서명
-    private String bname; // 저자
+    // 1. 멤버변수
+    private int bno;       // pk.도서번호
+    private String btitle;  // 도서명
+    private String bname;   // 저자
 
 
-    //기본생성자
+    // 2. 생성자(기본/전체)
     public  BookDto(){}
 
-    //풀생성자
     public  BookDto(int bno, String btitle, String bname) {
         this.bno = bno;
         this.btitle = btitle;
         this.bname = bname;
     }
 
-    public  BookDto(String btitle, String bname) {
-
-        this.btitle = btitle;
-        this.bname = bname;
-    }
-
-    //bno Getter 및 Setter
+    // 3. 메소드(getter/setter/toString)
     public int getBno() {
         return bno;
     }
 
-    //메소드
-    public void setBno(int bno) {
-        this.bno = bno;
-    }
-
-    //btitle Getter 및 Setter
     public String getBtitle() {
         return btitle;
+    }
+
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBno(int bno) {
+        this.bno = bno;
     }
 
     public void setBtitle(String btitle) {
         this.btitle = btitle;
     }
 
-    //bname Getter 및 Setter
-    public String getBname() {
-        return bname;
-    }
-
     public void setBname(String bname) {
         this.bname = bname;
     }
-
-
-    //toString
 
     @Override
     public String toString() {
@@ -63,4 +50,4 @@ public class BookDto {
                 ", bname='" + bname + '\'' +
                 '}';
     }
-}
+} // class end
