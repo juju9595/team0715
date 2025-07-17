@@ -26,8 +26,8 @@ public class BookView {
 
 
         bno++; // 도서번호(bno) 증가
-        boolean result=bookController.bookPost( bno,btitle,bname );
-        if(result==true){
+        boolean result = bookController.bookPost( bno,btitle,bname );
+        if(result ==true){
             System.out.println("[안내]도서등록성공");
         }else{
             System.out.println("[경고]도서등록실패");
