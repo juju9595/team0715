@@ -3,7 +3,7 @@ package team0715.view;
 import team0715.controller.MemberController;
 import static team0715.view.Index.scan;
 
-public class MemberView {//class s
+public class MemberView {
 
     // 0. 싱글톤 생성(memberView)
     private MemberView(){}
