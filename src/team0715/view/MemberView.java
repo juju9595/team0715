@@ -10,7 +10,7 @@ public class MemberView {//class s
     private static final MemberView memberView = new MemberView();
     public static MemberView getInstance() {
         return memberView;
-    }//public static MemberView end
+    }
 
     // 0. 싱글톤 호출(memberController)
     private MemberController memberController = MemberController.getInstance();
