@@ -1,21 +1,15 @@
 package team0715.view;
 
 import team0715.controller.BookController;
-import team0715.controller.MemberController;
-
-import static team0715.AppStart.scan;
+import static team0715.view.Index.scan;
 
 public class BookView {
+    
+    // 0.싱글톤 생성(bookController)
     private BookView(){}
     private static final BookView bookView = new BookView();
-    public static BookView getInstance(){
-        return bookView;
-    }//public static BookView end
+    public static BookView getInstance(){ return bookView; }//public static BookView end
     private BookController bookController = BookController.getInstance();
-
-
-    //2) controller 싱글톤 가져오기
-    private MemberController memberController = MemberController.getInstance();
 
 
     // 3. 메소드

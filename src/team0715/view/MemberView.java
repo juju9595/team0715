@@ -1,38 +1,36 @@
 package team0715.view;
 
 import team0715.controller.MemberController;
-
-import java.util.Scanner;
+import static team0715.view.Index.scan;
 
 public class MemberView {//class s
+
+    // 0. 싱글톤 생성(memberView)
     private MemberView(){}
     private static final MemberView memberView = new MemberView();
     public static MemberView getInstance() {
         return memberView;
     }//public static MemberView end
 
-    //2) controller 싱글톤 가져오기
+    // 0. 싱글톤 호출(memberController)
     private MemberController memberController = MemberController.getInstance();
 
-    //*모든 메소드에서 사용 가능한 Scanner 입력객체
-    private Scanner scan = new Scanner(System.in);
-
-    // ★★ 로그인 후 로그인ID 정적변수 초기화 및 setter ★★
+    // 1. 멤버변수
+    // ★★ 로그인ID 정적변수 초기화 (setter/getter)
     private static String loginMember = null;
     public String getLoginMember() { return loginMember; }
     public String setLoginMember( String mid ) { return loginMember = mid; }
 
     // 3. 메소드
-    // 3-1 회원가입 메소드
-
-    private int mno = 0;// View에서 직접 회원정보 증가
+    // 3-1. 회원가입 메소드
+    private int mno = 0;// 회원번호( PK:mno ) 자동번호 초기화
     public void signup(){
         System.out.println("--- 회원 가입 ---");
-        System.out.println("아이디 : "); String mid = scan.next();
-        System.out.println("비밀번호 : "); String mpwd = scan.next();
-        System.out.println("이름 : "); String mname = scan.next();
-        System.out.println("연락처 : "); String mphone = scan.next();
-        mno++; // 회원번호 증가
+        System.out.print("아이디 : "); String mid = scan.next();
+        System.out.print("비밀번호 : "); String mpwd = scan.next();
+        System.out.print("이름 : "); String mname = scan.next();
+        System.out.print("연락처 : "); String mphone = scan.next();
+        mno++; // 회원번호(mno) 증가
         boolean result = memberController.signup(mno, mid, mpwd, mphone, mname);
         if(result) {
             if (mid.equals("admin")) {
@@ -44,7 +42,7 @@ public class MemberView {//class s
         }
     }
 
-    // 3-2 로그인 메소드
+    // 3-2. 로그인 메소드
     public void login() {
         System.out.println("--- 로그인 ---");
         System.out.print("아이디 : "); String mid = scan.next();
@@ -61,5 +59,5 @@ public class MemberView {//class s
 
         System.out.printf("[안내] %s님, 환영합니다.\n", mid);
 
-    } // login() end.
-}//class e
+    } // login() end
+}//class end
