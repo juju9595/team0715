@@ -29,9 +29,13 @@ public class MemberDao {
 
     // 3. 메소드
     // 3-1. 회원가입 메소드
+//    private int mno = 0;// 회원번호(PK:mno) 자동번호 초기화  : 뷰의 입력값이 없어서 충돌남.
+//    private int mtype = 1;// 회원유형(일반유저) 고정
+//    public int getMno() { return mno;}
+//    public int getMtype() { return mtype;}
     public boolean signup(int mno, String mid, String mpwd, String mphone, String mname, int mtype ){
         boolean result = false;
-        MemberDto memberDto = new MemberDto(mno, mid,mpwd,mphone,mname, mtype);
+        MemberDto memberDto = new MemberDto(++mno, mid,mpwd,mphone,mname, mtype);
         memberDB.add(memberDto);
         result = true;
         return result;

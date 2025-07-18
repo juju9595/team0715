@@ -8,7 +8,7 @@ public class MemberDto {
     private String mpwd;   // 비밀번호
     private String mphone; // 연락처
     private String mname;  // 이름
-    private int mtype = 1;     // 회원유형
+    private int mtype;     // 회원유형
 
     // 2.생성자(기본/전체)
     public MemberDto(){}
@@ -20,6 +20,15 @@ public class MemberDto {
         this.mphone = mphone;
         this.mname = mname;
         this.mtype = mtype;
+    }
+
+    public MemberDto(String mid, String mpwd, String mphone, String mname) {
+
+        this.mid = mid;
+        this.mpwd = mpwd;
+        this.mphone = mphone;
+        this.mname = mname;
+
     }
 
     public MemberDto(String mid, String mpwd ){

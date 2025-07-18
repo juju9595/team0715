@@ -23,8 +23,8 @@ public class MemberView {
         return loginMember;
     }
 
-    public String setLoginMember(String mid) {
-        return loginMember = mid;
+    public String setLoginMember( String mno ) {
+        return loginMember = mno;
     }
 
     // 3. 메소드
@@ -67,9 +67,9 @@ public class MemberView {
         MemberDto result = memberController.login(mid, mpwd);
 
         if ( result != null ) {
-            setLoginMember( mid );
-            System.out.println(getLoginMember());
-            System.out.printf("[안내] %s님, 환영합니다.\n", result.getMname());
+            setLoginMember( result.getMname() );
+            System.out.println( getLoginMember() );
+            System.out.printf("[안내] %s님(회원번호 : %d), 환영합니다.\n", result.getMname(), result.getMno());
             return result;
         } else {
             System.out.println("[경고] 아이디와 비밀번호를 확인하세요.");
@@ -99,5 +99,5 @@ public class MemberView {
 //        }
 //        return result;
 //    } // func end
-//
+
 }//class end

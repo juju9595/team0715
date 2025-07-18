@@ -1,6 +1,5 @@
 package team0715.view;
 import team0715.model.dto.MemberDto;
-
 import java.util.Scanner;
 
 public class Index {
@@ -17,7 +16,6 @@ public class Index {
     private BookView bookView = BookView.getInstance();
     private LoanView loanView = LoanView.getInstance();
 
-
     // 1. 멤버변수
     // Scanner( 입력함수 ) 객체 정적변수 생성
     static Scanner scan = new Scanner(System.in);
@@ -33,11 +31,10 @@ public class Index {
             System.out.print("선택 > ");
             int choose = scan.nextInt();
             if ( choose == 1 ) { memberView.signup(); }  // 1. 회원가입 메소드
-            else if ( choose == 2 ) {
-                // 로그인 성공할 경우 화면!
+            else if ( choose == 2 ) { // 2. 로그인 메소드
                 MemberDto result = memberView.login();
-                System.out.println( result.getMtype() );
-                if( result != null ){  // 2. 로그인 메소드
+                //System.out.println( result.getMtype() );
+                if( result != null ){   // 로그인 성공할 경우 화면!
                     for (;;) {
                         if (  result.getMtype() == 0 ) {  // 1) 회원유형 : 관리자인 경우
                             System.out.println("=========== 로그인 후 메뉴 (admin일경우) ===========");
@@ -97,7 +94,7 @@ public class Index {
                             }
                         } // if(회원유형별 화면) end
                     } // 회원전용화면(로그인) 무한루프 end
-                } // 로그인 성공!
+                } // 로그인 성공 조건 end
             } // 2. 로그인 메소드 end
         } // 로그인 이전, 공통화면( index/무한루프 ) end
     } // index() end
