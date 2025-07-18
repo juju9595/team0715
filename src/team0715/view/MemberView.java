@@ -52,7 +52,7 @@ public class MemberView {
                 System.out.println("[안내] 회원가입 성공!");
             }
         }
-    } // func end.
+    } // func end
     // 3-2. 로그인 메소드_250718_booleen
     public MemberDto login() {
         System.out.println("--- 로그인 ---");
