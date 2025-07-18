@@ -41,7 +41,7 @@ public class Index {
                 if( memberView.login() == false ){ continue; }  // 2. 로그인 메소드
                 else { // 로그인 성공할 경우!
                     for (;;) {
-                        if ( mtype == 0 ) {  // 1) 회원유형 : 관리자인 경우
+                        if ( false ) {  // 1) 회원유형 : 관리자인 경우
 
                             System.out.println("=========== 로그인 후 메뉴 (admin일경우) ===========");
                             System.out.println("  1.도서등록 | 2.도서대출 | 3.도서반납 | 4.내대출현황 | 5.도서목록 | 6.로그아웃");
