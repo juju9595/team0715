@@ -21,9 +21,9 @@ public class MemberController {//class s
 
     // 3. 메소드
     // 3-1 회원가입 메소드
-    public boolean signup(int mno,String mid, String mpwd, String mphone, String mname){
+    public boolean signup(int mno,String mid, String mpwd, String mphone, String mname, int mtype){
         boolean result = false;
-        result = memberDao.signup(mno, mid, mpwd, mphone, mname );
+        result = memberDao.signup(mno, mid, mpwd, mphone, mname, mtype);
         return result;
     }
 

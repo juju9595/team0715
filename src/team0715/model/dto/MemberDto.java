@@ -13,15 +13,7 @@ public class MemberDto {
     // 2.생성자(기본/전체)
     public MemberDto(){}
 
-    public MemberDto(int mno, String mid, String mpwd, String mphone, String mname) {
-        this.mno = mno;
-        this.mid = mid;
-        this.mpwd = mpwd;
-        this.mphone = mphone;
-        this.mname = mname;
-    }
-
-    public MemberDto(int mno, String mid, String mpwd, String mphone, String mname. int mtype) {
+    public MemberDto(int mno, String mid, String mpwd, String mphone, String mname, int mtype) {
         this.mno = mno;
         this.mid = mid;
         this.mpwd = mpwd;
@@ -30,16 +22,12 @@ public class MemberDto {
         this.mtype = mtype;
     }
 
-
-
-
-    public MemberDto( String mid, String mpwd ){
+    public MemberDto(String mid, String mpwd ){
         this.mid = mid;
         this.mpwd = mpwd;
     }
 
     // 3. 메소드(getter/setter/toString)
-
 
     public int getMno() {
         return mno;
@@ -61,6 +49,7 @@ public class MemberDto {
         return mname;
     }
 
+    public int getMtype() {return mtype;}
 
     public void setMno(int mno) {
         this.mno = mno;
@@ -82,7 +71,9 @@ public class MemberDto {
         this.mname = mname;
     }
 
-
+    public void setMtype(int mtype) {
+        this.mno = mtype;
+    }
 
     @Override
     public String toString() {
