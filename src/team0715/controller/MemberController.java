@@ -17,8 +17,6 @@ public class MemberController {//class s
     // 0. 싱글톤 호출(memberDao)
     private MemberDao memberDao = MemberDao.getInstance();
 
-
-
     // 3. 메소드
     // 3-1 회원가입 메소드
     public boolean signup(int mno,String mid, String mpwd, String mphone, String mname, int mtype){
@@ -27,19 +25,20 @@ public class MemberController {//class s
         return result;
     }
 
-    // 3-2 로그인 메소드_ 정은주
-//    public boolean login(String mid, String mpwd){
-//        boolean result = false;
-//        result = memberDao.login(mid, mpwd);
-//        return result;
-//    }
-
     // 3-2. 로그인 메소드
-    public boolean login( String mid, String mpwd ){
-        boolean result = false;
+    public MemberDto login( String mid, String mpwd ){
+        MemberDto result = null;
         result = memberDao.login(mid, mpwd);
         return result;
     }// func end
+
+
+    // 3-2. 로그인 메소드_250718_boolean
+//    public boolean login( String mid, String mpwd ){
+//        boolean result = false;
+//        result = memberDao.login(mid, mpwd);
+//        return result;
+//    }// func end
 
     // 3-3. 회원정보(객체) 호출 메소드
     public MemberDto getMember(String mid ){

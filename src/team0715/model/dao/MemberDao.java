@@ -36,29 +36,35 @@ public class MemberDao {
         result = true;
         return result;
     } // func end
-    
-    // 3-1. 로그인 메소드 _ 정은주
-//    public boolean login(String mid, String mpwd){
-//        boolean result = false;
-//        MemberDto memberDto = new MemberDto(mid, mpwd);
-//        memberDB.add(memberDto);
-//        result = true;
-//        return result;
-//    }// login() end
 
 
     // 3-2. 로그인 메소드
-    public boolean login( String mid, String mpwd ){
-       boolean result = false;
+    public MemberDto login( String mid, String mpwd ){
+        MemberDto result = null;
         for(int i = 0; i < memberDB.size(); i++ ){
             MemberDto member = memberDB.get(i);
             if( mid.equals( member.getMid()) && mpwd.equals( member.getMpwd()) ){
-                result = true; // 로그인 입력 아이디와 memberDB 일치하면 리턴 true
+                result = member; // 로그인 입력 아이디와 memberDB 일치하면 리턴 true
                 return result;
             }
         } // for end
         return result;
     }// func end
+
+
+    // 3-2. 로그인 메소드_250718_booleen
+    // 작동 성공 확인: 단, 회원유형정보도 필요하기에 리턴값을 booleen --> MemberDto 변경
+//    public boolean login( String mid, String mpwd ){
+//        boolean result = false;
+//        for(int i = 0; i < memberDB.size(); i++ ){
+//            MemberDto member = memberDB.get(i);
+//            if( mid.equals( member.getMid()) && mpwd.equals( member.getMpwd()) ){
+//                result = true; // 로그인 입력 아이디와 memberDB 일치하면 리턴 true
+//                return result;
+//            }
+//        } // for end
+//        return result;
+//    }// func end
 
 
     // 3-3. 회원정보(객체) 호출 메소드_ 잘 되는 것 확인함.
