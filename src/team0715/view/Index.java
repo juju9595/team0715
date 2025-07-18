@@ -1,11 +1,5 @@
 package team0715.view;
-
-import team0715.model.dao.MemberDao;
-import team0715.model.dto.MemberDto;
-
-import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class Index {
 
@@ -39,7 +33,7 @@ public class Index {
             if ( choose == 1 ) { memberView.signup(); }  // 1. 회원가입 메소드
             else if ( choose == 2 ) {
                 if( memberView.login() == false ){ continue; }  // 2. 로그인 메소드
-                else { // 로그인 성공할 경우!
+                else { // 로그인 성공할 경우 화면!
                     for (;;) {
                         if ( false ) {  // 1) 회원유형 : 관리자인 경우
 
@@ -98,15 +92,13 @@ public class Index {
                             else {
                                 System.out.println("[경고] 해당 메뉴는 관리자만 접근 가능합니다.");
                             }
-
                         } // if(회원유형별 화면) end
 
-                    } // 로그인 이후, 무한루프 end
+                    } // 회원전용화면(로그인) 무한루프 end
                 } // 로그인 성공!
             } // 2. 로그인 메소드 end
 
         } // 로그인 이전, 공통화면( index/무한루프 ) end
 
     } // index() end
-    
 } //class end

@@ -1,8 +1,6 @@
 package team0715.view;
-
 import team0715.controller.MemberController;
 import team0715.model.dto.MemberDto;
-
 import static team0715.view.Index.scan;
 
 public class MemberView {

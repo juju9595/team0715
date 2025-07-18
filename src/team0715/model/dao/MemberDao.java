@@ -13,19 +13,19 @@ public class MemberDao {
     }
     
     // 1. 멤버변수
-    // 회원정보 리스트 DB
+    // 회원정보 전체리스트 DB
     private static ArrayList<MemberDto> memberDB = new ArrayList<>();
     // static 초기화 블록 → 클래스가 처음 로딩될 때 단 한 번 실행됨
+    // 관리자(admin) 정보 객체 직접 생성
     static {
         MemberDto admin = new MemberDto(0, "admin", "1234", "010-1111-2222", "관리자", 0);
         memberDB.add(admin);
     }
-    // 필요 시 접근 메서드
+    // 회원정보 전체리스트 DB 조회 메서드
     public ArrayList<MemberDto> getMemberDB() {
         return memberDB;
 
     }
-
 
     // 3. 메소드
     // 3-1. 회원가입 메소드
